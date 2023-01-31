@@ -11,7 +11,7 @@ from telethon.tl import functions
 from telethon.tl.functions.channels import LeaveChannelRequest
 from asyncio import sleep
 from telethon import __version__ as tel
-from material import mc as gg, bc as g, startxt2, startxt, hlptxt
+from material import mc as gg, bsdk as g, startxt2, startxt, hlptxt
 from telethon.tl.types import ChatBannedRights, ChannelParticipantsAdmins, ChatAdminRights
 from telethon.tl.functions.channels import EditBannedRequest
 from datetime import datetime
