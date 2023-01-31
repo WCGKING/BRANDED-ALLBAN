@@ -13,7 +13,7 @@ This Bot Will Help You To Restrict all The members of the group
 </details><details>
 <summary><h4><strong>Deploy On Heroku. </strong></h4></summary>
 <blockquote><strong>You can deploy this bot on <code>Heroku</code> very easily from here!!</strong><br><br>
-<a href="https://heroku.com/deploy?template=https://github.com/AakashxDx/BanallBot"><img src="https://img.shields.io/badge/Deploy%20To%20Heroku-black?style=for-the-badge&logo=heroku" width="200""/></a>
+<a href="https://heroku.com/deploy?template=https://github.com/AakashxDx/Banall-Bot"><img src="https://img.shields.io/badge/Deploy%20To%20Heroku-black?style=for-the-badge&logo=heroku" width="200""/></a>
 </blockquote> 
 </details>
 
