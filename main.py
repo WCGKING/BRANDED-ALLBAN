@@ -121,7 +121,7 @@ async def bun(event):
            try:
                await event.client(EditBannedRequest(event.chat_id, int(user.id), ChatBannedRights(until_date=None,view_messages=True)))
            except Exception as e:
-               await event.edit(material(e))
+               await event.edit(str(e))
            await sleep(0.3)
 
 
