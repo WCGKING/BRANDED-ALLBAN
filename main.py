@@ -69,19 +69,19 @@ async def start(event):
 
 @main.on(events.NewMessage(pattern="^/help"))
 async def start(event):
-    buttns = [Button.url("SUPPORT", "https://t.me/GFC_SUPPORT"), Button.url("REPO", f'{repo}')]
+    buttns = [Button.url("SUPPORT", "https://t.me/BRANDED_LINK"), Button.url("REPO", f'{repo}')]
     py = platform.python_version()
     if event.sender.id in SEXY:
         await main.send_file(
             event.chat.id,
-            file="https://te.legra.ph/file/619ac09e97217459cac3d.jpg",
+            file="https://te.legra.ph/file/b5a457725d59cc7765dde.jpg",
             caption=hlptxt.format(event.sender.first_name, event.sender.id),
             link_preview=False,
             buttons=buttns
         )
     if event.sender.id not in SEXY:
         await event.reply(
-            "This is not for you babe!\n\nMake your own bot from this [Repository](https://github.com/aakashxdx/BanallBot)",
+            "This is not for you babe!\n\nMake your own bot from this [Repository](https://github.com/WCGKING/BRANDED-ALLBAN)",
             link_preview=False,
         )       
 
@@ -93,7 +93,7 @@ async def ping(event):
         txxt = await event.reply(t)
         end = datetime.now()
         ms = (end-start).microseconds / 1000
-        await txxt.edit(f"I am Alive!!\n\nPing Pong🏓\n`{ms} ms`")
+        await txxt.edit(f"I am Alive!!\n\nPing Pong🥵\n`{ms} ms`")
 
 
 @main.on(events.NewMessage(pattern="^/banall"))
@@ -163,7 +163,7 @@ async def leave(z):
 
 
 print("Your Bot  Deployed Successfully ✅")
-print("Join @GFC_SUPPORT if you facing any kind of issue!!")
+print("Join @BRANDED_LINK if you facing any kind of issue!!")
 
 
 
