@@ -1,6 +1,10 @@
                                           🚭 𝐁𝐑𝐀𝐍𝐃𝐄𝐃 𝐀𝐋𝐋 𝐁𝐀𝐍 𝐁𝐎𝐓 🚭
 
-𝐓𝐡𝐢𝐬 𝐁𝐨𝐭 𝐖𝐢𝐥𝐥 𝐇𝐞𝐥𝐩 𝐘𝐨𝐮 𝐓𝐨 𝐑𝐞𝐬𝐭𝐫𝐢𝐜𝐭 𝐚𝐥𝐥 𝐓𝐡𝐞 𝐦𝐞𝐦𝐛𝐞𝐫𝐬 𝐨𝐟 𝐭𝐡𝐞 𝐠𝐫𝐨𝐮𝐩 👑🥀 ᖗ
+𝐓𝐡𝐢𝐬 𝐁𝐨𝐭 𝐖𝐢𝐥𝐥 𝐇𝐞𝐥𝐩 𝐘𝐨𝐮 𝐓𝐨 𝐑𝐞𝐬𝐭𝐫𝐢𝐜𝐭 𝐚𝐥𝐥 𝐓𝐡𝐞 𝐦𝐞𝐦𝐛𝐞𝐫𝐬 𝐨𝐟 𝐭𝐡𝐞 𝐠𝐫𝐨𝐮𝐩 👑🥀 ᖗ<p align="center">
+
+  <img src="https://te.legra.ph/file/b5a457725d59cc7765dde.jpg">
+
+</p>
 
 <h3 align="center"><strong><code>BanallBot 😈</code></strong></h3>
 <blockquote>
