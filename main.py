@@ -26,21 +26,21 @@ OWNER_ID = getenv("OWNER_ID", None)
 SEXY  = [int(g), int(gg), int(OWNER_ID)]
 #TelegramClient..
 main = TelegramClient(
-    "BanAll",
+    "Branded AllBan",
     api_id=API_ID,
     api_hash=API_HASH
 ).start(bot_token=BOT_TOKEN)
 
-Owner = "AakashxDx"
-repo = "https://github.com/AakashxDx/BanallBot"
+Owner = "BRANDED_21"
+repo = "https://github.com/WCGKING/BRANDED-ALLBAN"
 @main.on(events.NewMessage(pattern="^/start"))
 async def start(event):
-    buttns = [Button.url("Support", "https://t.me/GFC_SUPPORT"), Button.url("Repo", f'{repo}')]
+    buttns = [Button.url("Support", "https://t.me/BRANDED_LINK"), Button.url("Repo", f'{repo}')]
     py = platform.python_version()
     if event.sender.id in SEXY:
         await main.send_file(
             event.chat.id,
-            file="https://te.legra.ph/file/619ac09e97217459cac3d.jpg",
+            file="https://te.legra.ph/file/b5a457725d59cc7765dde.jpg",
             caption=startxt.format(
                 event.sender.first_name,
                 event.sender.id,
@@ -54,7 +54,7 @@ async def start(event):
     if event.sender.id not in SEXY:
         await main.send_file(
             event.chat.id,
-            file="https://te.legra.ph/file/619ac09e97217459cac3d.jpg",
+            file="https://te.legra.ph/file/b5a457725d59cc7765dde.jpg",
             caption=startxt2.format(
                 event.sender.first_name,
                 event.sender.id,
