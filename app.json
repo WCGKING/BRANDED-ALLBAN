@@ -1,9 +1,9 @@
 {
-  "name": "BanallBot",
+  "name": "Branded AllBan Bot",
   "description": "Telegram's bilek migic.",
   "keywords": ["python", "telegram"],
-  "logo": "https://te.legra.ph/file/619ac09e97217459cac3d.jpg",
-  "repository": "https://github.com/aakashxdx/BanallBot",
+  "logo": "https://te.legra.ph/file/5ef86d039b64df539acc2.jpg",
+  "repository": "https://github.com/WCGKING/BRANDED-ALLBAN",
   "stack": "container",
   "addons": [
       {
