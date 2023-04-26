@@ -1,5 +1,6 @@
-# BanAllBot
-This Bot Will Help You To Restrict all The members of the group
+🚭 𝐁𝐑𝐀𝐍𝐃𝐄𝐃 𝐀𝐋𝐋 𝐁𝐀𝐍 𝐁𝐎𝐓 🚭
+
+𝐓𝐡𝐢𝐬 𝐁𝐨𝐭 𝐖𝐢𝐥𝐥 𝐇𝐞𝐥𝐩 𝐘𝐨𝐮 𝐓𝐨 𝐑𝐞𝐬𝐭𝐫𝐢𝐜𝐭 𝐚𝐥𝐥 𝐓𝐡𝐞 𝐦𝐞𝐦𝐛𝐞𝐫𝐬 𝐨𝐟 𝐭𝐡𝐞 𝐠𝐫𝐨𝐮𝐩 👑🥀 ᖗ
 
 <h3 align="center"><strong><code>BanallBot 😈</code></strong></h3>
 <blockquote>
