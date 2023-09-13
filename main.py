@@ -31,11 +31,10 @@ main = TelegramClient(
     api_hash=API_HASH
 ).start(bot_token=BOT_TOKEN)
 
-Owner = "BRANDED_21"
+Owner = "BRANDRD_BOT"
 repo = "https://github.com/WCGKING/BRANDED-ALLBAN"
 @main.on(events.NewMessage(pattern="^/start"))
-async def start(event):
-    buttns = [Button.url("Support", "https://t.me/BRANDED_LINK"), Button.url("Repo", f'{repo}')]
+async def start(event): buttns = [Button.url("Support", "https://t.me/B_R_A_N_D_E_D_KI_N_G"), Button.url("Repo", f'{repo}')]
     py = platform.python_version()
     if event.sender.id in SEXY:
         await main.send_file(
