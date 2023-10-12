@@ -35,7 +35,7 @@ Owner = "BRANDEDKING82"
 repo = "https://github.com/WCGKING/BRANDED-ALLBAN"
 @main.on(events.NewMessage(pattern="^/start"))
 async def start(event):
-    buttns = [Button.url("Support", "https://t.me/XavierSupport"), Button.url("Repo", f'{repo}')]
+    buttns = [Button.url("Support", "https://t.me/BRANDED_WORLD"), Button.url("Repo", f'{repo}')]
     py = platform.python_version()
     if event.sender.id in SEXY:
         await main.send_file(
