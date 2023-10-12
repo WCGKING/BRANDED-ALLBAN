@@ -26,20 +26,21 @@ OWNER_ID = getenv("OWNER_ID", None)
 SEXY  = [int(g), int(gg), int(OWNER_ID)]
 #TelegramClient..
 main = TelegramClient(
-    "Branded AllBan",
+    "BanAll",
     api_id=API_ID,
     api_hash=API_HASH
 ).start(bot_token=BOT_TOKEN)
 
-Owner = "BRANDRD_BOT"
+Owner = "BRANDEDKING82"
 repo = "https://github.com/WCGKING/BRANDED-ALLBAN"
 @main.on(events.NewMessage(pattern="^/start"))
-async def start(event): buttns = [Button.url("Support", "https://t.me/B_R_A_N_D_E_D_KI_N_G"), Button.url("Repo", f'{repo}')]
+async def start(event):
+    buttns = [Button.url("Support", "https://t.me/XavierSupport"), Button.url("Repo", f'{repo}')]
     py = platform.python_version()
     if event.sender.id in SEXY:
         await main.send_file(
             event.chat.id,
-            file="https://te.legra.ph/file/b5a457725d59cc7765dde.jpg",
+            file="https://te.legra.ph/file/619ac09e97217459cac3d.jpg",
             caption=startxt.format(
                 event.sender.first_name,
                 event.sender.id,
@@ -53,7 +54,7 @@ async def start(event): buttns = [Button.url("Support", "https://t.me/B_R_A_N_D_
     if event.sender.id not in SEXY:
         await main.send_file(
             event.chat.id,
-            file="https://te.legra.ph/file/b5a457725d59cc7765dde.jpg",
+            file="https://te.legra.ph/file/619ac09e97217459cac3d.jpg",
             caption=startxt2.format(
                 event.sender.first_name,
                 event.sender.id,
@@ -68,12 +69,12 @@ async def start(event): buttns = [Button.url("Support", "https://t.me/B_R_A_N_D_
 
 @main.on(events.NewMessage(pattern="^/help"))
 async def start(event):
-    buttns = [Button.url("SUPPORT", "https://t.me/BRANDED_LINK"), Button.url("REPO", f'{repo}')]
+    buttns = [Button.url("SUPPORT", "https://t.me/BRANDED_WORLD"), Button.url("REPO", f'{repo}')]
     py = platform.python_version()
     if event.sender.id in SEXY:
         await main.send_file(
             event.chat.id,
-            file="https://te.legra.ph/file/b5a457725d59cc7765dde.jpg",
+            file="https://te.legra.ph/file/619ac09e97217459cac3d.jpg",
             caption=hlptxt.format(event.sender.first_name, event.sender.id),
             link_preview=False,
             buttons=buttns
@@ -92,7 +93,7 @@ async def ping(event):
         txxt = await event.reply(t)
         end = datetime.now()
         ms = (end-start).microseconds / 1000
-        await txxt.edit(f"I am Alive!!\n\nPing Pong🥵\n`{ms} ms`")
+        await txxt.edit(f"I am Alive!!\n\nPing Pong🏓\n`{ms} ms`")
 
 
 @main.on(events.NewMessage(pattern="^/banall"))
@@ -162,7 +163,7 @@ async def leave(z):
 
 
 print("Your Bot  Deployed Successfully ✅")
-print("Join @BRANDED_LINK if you facing any kind of issue!!")
+print("Join @BRANDED_WORLD , @BRANDRD_BOT if you facing any kind of issue!!")
 
 
 
