@@ -16,8 +16,6 @@
 &nbsp;◍&nbsp;<code>/leave</code>&nbsp;:&nbsp;<strong>Do Check yourself.</strong><br>
 &nbsp;◍&nbsp;<code>/restart</code>&nbsp;:&nbsp;<strong>Do Check yourself.</strong>
 </details><details>
-<summary><h4><strong>Deploy On Heroku. </strong></h4></summary>
-<blockquote><strong>You can deploy this bot on <code>Heroku</code> very easily from here!!</strong><br><br>
 
   <p align="center">
 <b>𝗗𝗘𝗣𝗟𝗢𝗬𝗠𝗘𝗡𝗧 𝗠𝗘𝗧𝗛𝗢𝗗𝗦</b>
@@ -29,11 +27,4 @@
 
 <p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/WCGKING/BRANDED-ALLBAN"> <img src="https://img.shields.io/badge/Deploy%20On%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
-<p>
-<details>
-<summary><h3><strong>Credits💕</strong></h3></summary>
-<strong>All credit Goes To</strong>&nbsp;<code>:-</code><br>
-<code>Telegram:- <a href="https://t.me/BRANDRD_21">@BRANDRD_21</a></code><br>
-<code>Github:- <a href="https://github.com/WCGKING/BRANDED-ALLBAN">WCGKING</a></code><br>
-</details>
-</p>
+
