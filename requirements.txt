@@ -1,3 +1,2 @@
-telethon
-asyncio
 python-dotenv
+telethon
