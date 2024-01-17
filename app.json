@@ -1,42 +1,35 @@
 {
-  "name": "Branded AllBan Bot",
-  "description": "Telegram's bilek migic.",
-  "keywords": ["python", "telegram"],
-  "logo": "https://te.legra.ph/file/5ef86d039b64df539acc2.jpg",
-  "repository": "https://github.com/WCGKING/BRANDED-ALLBAN",
-  "stack": "container",
-  "addons": [
-      {
-         "options": {
-            "version": "12"
-         },
-         "plan": "heroku-postgresql"
+   "name": "BRANDED KING ALL BOT",
+   "description": "Telegram Bot",
+   "repository": "https://github.com/WCGKING/BRANDED-ALLBAN",
+   "logo": "",
+   "image": "heroku/python",
+   "env": {
+      "API_ID": {
+        "description": "𝗙𝗶𝗹𝗹 𝗬𝗼𝘂𝗿 𝗔𝗣𝗜 𝗶𝗱( My.telegram.org)",
+        "value": "",
+        "required": true
+      },
+      "API_HASH": {
+        "description": "𝗙𝗶𝗹𝗹 𝗬𝗼𝘂𝗿 𝗔𝗣𝗜 𝗛𝗔𝗦𝗛 (My.telegram.org)",
+        "value": "",
+        "required": true
+      },
+      "BOT_TOKEN": {
+        "description": "𝗕𝗼𝘁 𝗧𝗼𝗸𝗲𝗻",
+        "value": "",
+        "required": true
+      },      
+      "SUDO": {
+            "description": "𝗢𝗪𝗡𝗘𝗥 𝗜𝗗",
+            "value": "",
+            "required": true  
       }
-   ],
-   "buildpacks": [
-    {
-      "url": "https://github.com/heroku/heroku-buildpack-python"
-    },
-    {
-      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
-    }
-  ],
-  "env": {
-        "BOT_TOKEN": {
-            "description": "A bot token from @BotFather",
-            "required": true
-        },
-        "API_ID": {
-            "description": "App ID from my.telegram.org/apps",
-            "required": true
-        },
-        "API_HASH": {
-            "description": "App Hash from my.telegram.org/apps",
-            "required": true
-        },
-        "OWNER_ID": {
-            "description": "Owner's numeric ID",
-            "required": true
+   },
+   "formation": {
+            "worker": {
+                "quantity": 1,
+                "size": "eco"
+            }
         }
-    }
 }
