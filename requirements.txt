@@ -3,7 +3,7 @@ asyncio
 python-dotenv
 python-telegram-bot==20.4
 telegram
-certifi==2023.7.22
+certifi==2023.11.17
 chardet==5.2.0
 idna==3.4
 pyTelegramBotAPI==4.12.0
