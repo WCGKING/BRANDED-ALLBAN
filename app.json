@@ -1,35 +1,73 @@
 {
-   "name": " BRANDED-ALLBAN",
-   "description": "Telegram Bot",
+      "name": "BAN ALL BOT",
+      "description": "advance banall bot",
+      "logo": "",
+      "keywords": [
+         "ban all bot",
+         "bot",
+         "Group",
+         "Telegram"         
+      ],   
    "repository": "https://github.com/WCGKING/BRANDED-ALLBAN",
-   "logo": "",
-   "image": "heroku/python",
+   "stack": "heroku-20",
+   "addons": [
+      {
+         "options": {
+            "version": "12"
+         },
+         "plan": "heroku-postgresql"
+      }
+   ],
    "env": {
+      "TOKEN": {
+         "description": "Your bot token. Can be obtained from https://telegram.dog/BotFather/",
+         "required": true,
+         "value": "YOUR BOT_TOKEN"
+      },
       "API_ID": {
-        "description": "𝗙𝗶𝗹𝗹 𝗬𝗼𝘂𝗿 𝗔𝗣𝗜 𝗶𝗱( My.telegram.org)",
-        "value": "",
-        "required": true
+         "description": "Get API_ID from my.telegram.org, used for telethon based modules.",
+         "required": true,
+         "value": ""
       },
       "API_HASH": {
-        "description": "𝗙𝗶𝗹𝗹 𝗬𝗼𝘂𝗿 𝗔𝗣𝗜 𝗛𝗔𝗦𝗛 (My.telegram.org)",
-        "value": "",
-        "required": true
-      },
-      "BOT_TOKEN": {
-        "description": "𝗕𝗼𝘁 𝗧𝗼𝗸𝗲𝗻",
-        "value": "",
-        "required": true
+         "description": "Get API_HASH from my.telegram.org, used for telethon based modules.",
+         "required": true,
+         "value": ""
+      },     
+      "BOT_ID": {
+         "description": "your bot id",
+         "required": true,
+         "value": ""
+      },  
+      "BOT_USERNAME": {
+         "description": "your bot username without @",
+         "required": true,
+         "value": ""
+      },  
+       "BOT_NAME": {
+         "description": "Your bot's name",
+         "required": true,
+         "value": ""
       },      
       "SUDO": {
-            "description": "𝗢𝗪𝗡𝗘𝗥 𝗜𝗗",
-            "value": "",
-            "required": true  
-      }
-   },
+         "description": "list of Auth user Id who can command the bot ",
+         "required": true,
+         "value": ""
+      }, 
+      "START_IMG": {
+         "description": "give the telegraph link of your network logo.",
+         "required": true,
+         "value": ""
+      },     
+      "ENV": {
+         "description": "Setting this to ANYTHING will enable environment variables. Leave it as it is",
+         "value": "ANYTHING"
+      }           
+},
    "formation": {
             "worker": {
                 "quantity": 1,
                 "size": "eco"
             }
         }
-  }
+}
