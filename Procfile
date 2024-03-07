@@ -1,1 +1,1 @@
-worker: python3 ban.py
+worker: python3 -m BanAllBot
