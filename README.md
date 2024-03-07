@@ -11,10 +11,18 @@
 <strong><i>❍&nbsp;𝐓𝐄𝐋𝐄𝐆𝐑𝐀𝐌 𝐁𝐑𝐀𝐍𝐃𝐄𝐃 𝐀𝐋𝐋𝐁𝐀𝐍 𝐁𝐎𝐓 ! 𝐔𝐒𝐄 𝐈𝐓 𝐎𝐍 𝐘𝐎𝐔𝐑 𝐎𝐖𝐍 𝐑𝐈𝐒𝐊 𝐖𝐄 𝐀𝐑𝐄 𝐍𝐎𝐓 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐈𝐁𝐋𝐄 𝐅𝐎𝐑 𝐀𝐍𝐘 𝐊𝐈𝐍𝐃 𝐎𝐅 𝐇𝐀𝐑𝐌 𝐓𝐇𝐈𝐒 𝐓𝐇𝐈𝐒 𝐑𝐄𝐏𝐎 💣❤️!</i></strong><br><br>
 </blockquote>
 <summary><h4><strong><i>Commands⚙️🛠️</i></strong></h4></summary>
-&nbsp;◍&nbsp;<code>/ping</code>&nbsp;:&nbsp;<strong>To Check Bot Ping Status.</strong><br>
-&nbsp;◍&nbsp;<code>/banall</code>&nbsp;:&nbsp;<strong>Do Check yourself</strong><br>
-&nbsp;◍&nbsp;<code>/leave</code>&nbsp;:&nbsp;<strong>Do Check yourself.</strong><br>
-&nbsp;◍&nbsp;<code>/restart</code>&nbsp;:&nbsp;<strong>Do Check yourself.</strong>
+⨷ /banall : ʙᴀɴ-ᴀʟʟ ᴍᴇᴍʙᴇʀs ɪɴ ᴀ ɢʀᴏᴜᴘ
+
+⨷ /unbanall : ᴜɴʙᴀɴ ᴀʟʟ ᴍᴇᴍʙᴇʀs ɪɴ ᴀ ɢʀᴏᴜᴘ
+
+⨷ /kickall : ᴋɪᴄᴋ ᴀʟʟ ᴍᴇᴍʙᴇʀs ɪɴ ᴀ ɢʀᴏᴜᴘ
+
+⨷ /muteall : ᴍᴜᴛᴇ ᴀʟʟ ᴍᴇᴍʙᴇʀs ɪɴ ᴀ ɢʀᴏᴜᴘ
+
+⨷ /unmuteall : ᴜɴᴍᴜᴛᴇ ᴀʟʟ ᴍᴇᴍʙᴇʀs ɪɴ ᴀ ɢʀᴏᴜᴘ(sᴛɪʟʟ ᴡɪʟʟ ᴛʜᴇ ʟɪsᴛ ɪɴ ʀᴇsᴛʀɪᴄᴛᴇᴅ ᴍᴇᴍʙᴇʀs ʙᴜᴛ ᴀʟʟ ʀᴇsᴛʀɪᴄᴛɪᴏɴs ᴡɪʟʟ ɢᴏ)
+
+⨷/unpinall : ᴜɴᴘɪɴ ᴀʟʟ ᴍᴇssᴀɢᴇs ɪɴ ᴀ ɢʀᴏᴜᴘ.
+
 </details><details>
 
   <p align="center">
